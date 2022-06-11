@@ -59,7 +59,7 @@ const App = () => {
     setFilter(e.target.value)
   }
   const handleDelete = (e) => {
-    const buttonId = parseInt(e.target.getAttribute('buttonid'))
+    const buttonId = e.target.getAttribute('buttonid')
     window.confirm(`Are sure you want to delete ${e.target.name}?`) && personService
       .deleteButton(buttonId)
       .then( () => {
